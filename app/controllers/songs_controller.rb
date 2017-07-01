@@ -7,6 +7,9 @@ class SongsController < ApplicationController
     end
     
     def create
-        # TODO create new song and redirect to url "/"
+      song = Song.new
+      song.title = params['title']
+      song.author = params['author']
+      redirect_to '/'
     end
 end
